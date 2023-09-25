@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app"></div>
+
+    <div class="score">СЧЕТ X: &nbsp <div class="xScore"></div> O: &nbsp<div class="oScore"></div>
+    </div>
+
+    <button type="submit" class="btn1">НОВАЯ ИГРА</button>
+    <button type="submit" class="btn2">СБРОСИТЬ СЧЕТ</button>
+
+    <script src="cookie.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+<style>
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        font-size: 90px;
+    }
+
+    .btn1 {
+        height: 75px;
+        width: 150px;
+    }
+    .btn2 {
+        height: 75px;
+        width: 150px;
+    }
+    .score {
+        display: flex;
+        font-weight: bold;
+    }
+
+    .xScore{
+        margin-right: 150px;
+    }
+</style>
+
+</html>
