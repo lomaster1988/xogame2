@@ -8,22 +8,55 @@
 </head>
 
 <body>
-    <div class="app"></div>
 
-    <div class="score">СЧЕТ X: &nbsp <div class="xScore"></div> O: &nbsp<div class="oScore"></div>
+    <div class="gameInterface">
+
+
+        <div class="settings">
+            <div class="engine-check">Играть против компьютера:<input type="checkbox" id="checkbox" checked></div>
+
+            <div class="music">
+
+                <audio src="/zimfira-znak.mp3" class="track"></audio>
+
+                <div class="mute"></div>
+
+            </div>
+
+        </div>
+        <div class="field-size-setting">
+            <div class="field-size">Размер игрового поля: <input type="number" value="3" class="field-size-input"></div>
+            <div>
+                <button class="btn0">Применить</button>
+            </div>
+        </div>
+        <div class="app"></div>
+        <div class="score">СЧЕТ X: &nbsp <div class="xScore"></div> O: &nbsp<div class="oScore"></div>
+        </div>
+
+        <button type="submit" class="btn1">НОВАЯ ИГРА</button>
+        <button type="submit" class="btn2">СБРОСИТЬ СЧЕТ</button>
     </div>
-
-    <button type="submit" class="btn1">НОВАЯ ИГРА</button>
-    <button type="submit" class="btn2">СБРОСИТЬ СЧЕТ</button>
 
     <script src="cookie.js"></script>
     <script src="script.js"></script>
+    <script src="ai.js"></script>
+
 
 
 
 </body>
 
 <style>
+    .gameInterface {
+        margin: auto;
+        width: 304px;
+        height: 800px;
+        background-color: bisque;
+        display: block;
+        justify-content: center;
+    }
+
     .row {
         display: flex;
     }
@@ -39,17 +72,49 @@
         height: 75px;
         width: 150px;
     }
+
     .btn2 {
         height: 75px;
         width: 150px;
     }
+
     .score {
         display: flex;
         font-weight: bold;
+        margin-bottom: 10px;
     }
 
-    .xScore{
+    .engine-check {
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .xScore {
         margin-right: 150px;
+    }
+
+    .field-size {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .field-size-setting {
+        display: flex;
+    }
+
+    .field-size-input {
+        width: 40px;
+    }
+
+    .mute {
+        margin-left: 40px;
+        background-image: url("mute.png");
+        width: 32px;
+        height: 32px;
+    }
+
+    .settings {
+        display: flex;
     }
 </style>
 
